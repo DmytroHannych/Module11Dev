@@ -2,6 +2,7 @@ package org.example.Entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.ToString;
 
 import java.util.List;
 
@@ -9,6 +10,7 @@ import java.util.List;
 @Table(name = "planet")
 @Entity
 @Data
+@ToString(exclude = {"tickets_from","tickets_to"})
 public class Planet {
     @Id
     @Column(name = "id")
